@@ -1,5 +1,5 @@
 # joseBot
-TFT Autoclicker made to farm tokens
+**TFT Autoclicker para farm de Tokens**
 
 Esta ferramenta foi criada para auxiliar no farm de Tokens nos eventos da Riot. Anteriormente, bastava ficar AFK (away from keyboard) por 10 minutos e logo em seguidar se render (FF) para que os tokens fossem adicionados à conta. Ao saber disso, nossa amiga Riot resolveu implementar mecanismos para detecção de AFK's, de forma a impedir que estes ganhassem tokens. Pensando nisso, lhes apresento o José Bot, que é capaz de farmar tokens automaticamente, sem possibilidade de ban (não altera arquivos do jogo), e que também é capaz de burlar o sistema de detecção de AFK's da Riot. O bot foi desenvolvido por mim, José Ricardo, juntamente com meu amigo José Ricardo (sim), ao qual devo grande agradecimento pelas ideias.
 
@@ -36,4 +36,4 @@ O bot deverá começar a fazer suas ações. Quando quiser parar, basta fechar a
 
 ## Importante
 
-O cliente e o jogo não podem ser movidos durante a operação do bot, e nem o mouse, de preferência.
+> O cliente e o jogo não podem ser movidos durante a operação do bot, e nem o mouse, de preferência.
