@@ -12,19 +12,19 @@ Em seguida, baixe os dois arquivos que estão nesse repositório, Tokens.py e mo
 
 Agora, instalaremos as bibliotecas necessárias para rodar o bot. Abra o CMD (Windows + R -> cmd -> Enter) e execute os comandos abaixo:
 
-pip install pyautogui
-pip install pillow
-pip install pywin32
+> pip install pyautogui
+> pip install pillow
+> pip install pywin32
 
 Em seguida, abra uma partida custom no LoL e coloque o jogo em modo janela, com uma resolução menor que fullscreen, e depois saia da partida. Agora, iremos configurar as coordenadas para que o bot aprenda os locais onde deve clicar. Vá até a pasta na área de trabalho onde salvou os arquivos, segure Shift + Botão direito e clique em "Abrir PowerShell" ou algo parecido. Na tela que aparecer, digite:
 
-python mouse.py
+> python mouse.py
 
 Este programa irá mostrar as coordenadas atuais do mouse, para que possamos configurar o bot. Deixe ele aberto e, voltando na pasta onde salvou os arquivos, abra o arquivo Tokens.py com algum editor de texto e configure as coordenadas que estão na primeira parte do arquivo, que vão de "xProcurarPartida" até "yPixelDesktop". Basta você colocar o mouse em cima do local indicado e atualizar as coordenadas do arquivo Tokens.py, de acordo com seu computador.
 
 Com as coordenadas definidas, você deverá fechar todos os programas que não sejam o bot e o LoL, abrir o power shell na pasta dos arquivos (Shift + Botão direito), mover essa tela azul de preferência para cima na esquerda (deixe ela menor para não interferir) e, estando no lobby do TFT normal game, digite no PowerShell:
 
-python Tokens.py
+> python Tokens.py
 
 O bot deverá começar a fazer suas ações. Quando quiser parar, basta fechar a janela do PowerShell ou apertar Ctrl + C nela.
 
