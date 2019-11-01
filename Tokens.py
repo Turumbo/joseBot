@@ -1,4 +1,5 @@
 #! python3
+import pywintypes
 import pyautogui as pg, sys, PIL.ImageGrab, win32gui
 from time import sleep
 
