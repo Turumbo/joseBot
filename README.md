@@ -26,6 +26,8 @@ python mouse.py
 
 Este programa irá mostrar as coordenadas atuais do mouse, para que possamos configurar o bot. Deixe ele aberto e, voltando na pasta onde salvou os arquivos, abra o arquivo Tokens.py com algum editor de texto e configure as coordenadas que estão na primeira parte do arquivo, que vão de "xProcurarPartida" até "yPixelDesktop". Basta você colocar o mouse em cima do local indicado e atualizar as coordenadas do arquivo Tokens.py, de acordo com seu computador.
 
+Para um tutorial detalhado de configuração das coordenadas, só clicar [aqui](https://drive.google.com/open?id=1UxBu7yyjDNyZfpL77O1f-sIZAqIoho8L2Jsh1lrr3TY).
+
 ## Execução
 
 Com as coordenadas definidas, você deverá fechar todos os programas que não sejam o bot e o LoL, abrir o power shell na pasta dos arquivos (Shift + Botão direito), mover essa tela azul de preferência para cima na esquerda (deixe ela menor para não interferir) e, estando no lobby do TFT normal game, digite no PowerShell:
