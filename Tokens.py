@@ -38,6 +38,10 @@ yClicarSair = 460
 xPixelDesktop = 400
 yPixelDesktop = 815
 
+#Botao de aceitar a recompensa das missões
+xAceitarMissao = 713
+yAceitarMissao = 640
+
 def clicarProcurarPartida():
 	pg.moveTo(xProcurarPartida, yProcurarPartida, 1)
 	pg.click()
@@ -106,14 +110,23 @@ def clicarSairJogo():
 	pg.mouseUp()
 #
 
-print("Created by Jose Ricardo\n\n")
+def clicarAceitarMissao(nVezes=1):
+        j = 0
+
+        while(j < nVezes):
+                pg.moveTo(xAceitarMissao, yAceitarMissao)
+                pg.click()
+                sleep(10)
+                j = j + 1
+        #
+#
+
+print("Criado por Jose Ricardo e Ricardo\n\n")
 
 #Salva instancia do client para que seja trazido para o foreground apos o fim do game
 leagueClient = win32gui.FindWindow(0, "League of Legends")
 
 pixelDesktop = PIL.ImageGrab.grab().load()[xPixelDesktop,yPixelDesktop]
-#print("Desktop: ", pixelDesktop)
-
 sleep(5)
 
 try:
@@ -125,7 +138,7 @@ try:
 		win32gui.BringWindowToTop(leagueClient)
 
 		#Entra na fila
-		print("Searching game...")
+		print("Na fila...")
 		clicarProcurarPartida()
 
 		#Enquanto a janela do jogo não abrir, continua clicando pra aceitar partida
@@ -152,12 +165,11 @@ try:
 		win32gui.SetForegroundWindow(leagueGame)
 		win32gui.BringWindowToTop(leagueGame)
 
-		print("Game started, counting:")
+		print("Jogo iniciado, contando 15 minutos...")
 
 		#Nesse ponto, a partida começou, e é iniciado um timer de 15 minutos
 		x = 900
 		while (x > 0):
-			print (x, "s")
 			x = x - 1
 			sleep(1)
 
@@ -207,6 +219,8 @@ try:
 		#
 
 		timer = 0
+		
+		print("Aguardando vida atingir 0..")
 
 		#Após acabar os 15 minutos, espera pra morrer, clicando no botão de sair até detectar que o jogo fechou
 		while (PIL.ImageGrab.grab().load()[xPixelDesktop,yPixelDesktop] != pixelDesktop):
@@ -229,6 +243,10 @@ try:
 		win32gui.SetForegroundWindow(leagueClient)
 		win32gui.BringWindowToTop(leagueClient)
 		sleep(5)
+		
+		#Clica no botao para aceitar recompensa das missoes. Mude este valor para mudar o numero de missoes aceitas
+		#por vez. Por default, ele tenta aceitar 2 missoes.
+		clicarAceitarMissao(2)
 
 		#Clica no botão de jogar novamente
 		clicarJogarNovamente()
